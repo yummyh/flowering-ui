@@ -1,0 +1,83 @@
+.drawer-wrap{
+	width:100%; 
+	height:100%;
+	position:fixed; 
+	top :0;
+	left: 0; 
+	z-index:10;
+	background-color:#000;
+	background: rgba(0, 0, 0, 0.5);
+	text-align:center;
+	.drawer-content{
+	    height: 100%;
+	    background-color: #fff;
+	    float: right;
+		overflow: auto;
+		position: relative;
+	    -webkit-overflow-scrolling: touch; //解决ios移动卡顿
+	}
+	.drawer-ctn-slide{
+		transition: width 0.2s linear;
+	}
+	.drawer-ctn-fade{
+		animation-name: fadeIn100;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-delay: 0s;
+	}
+
+	.filter-list{
+		position: absolute;
+		top: 0;
+		bottom: 0.4rem;
+		overflow-y: auto;
+		width: 100%;
+	}
+	.btn-list{
+        position: fixed;
+        width: 80%;
+        bottom: 0;
+        .btn{
+            width: 50%;
+        }
+    }
+}
+
+.drawer-open {
+    position: fixed;
+    width: 100%;
+}
+
+.drawer-show{
+	visibility: visible;
+}
+
+.drawer-hide{
+	visibility: hidden;
+}
+
+.drawer-mask-fadeIn{
+	animation-name: fadeIn50;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-delay: 0s;
+}
+
+@keyframes fadeIn50 {
+	0% {
+		background: rgba(0, 0, 0, 0.0);
+	}
+	100% {
+		background: rgba(0, 0, 0, 0.5);
+	}
+}
+
+@keyframes fadeIn100 {
+	0% {
+		background: rgba(255, 255, 255, 0.9);
+	}
+	100% {
+		background: rgba(255, 255, 255, 1);
+	}
+}
+

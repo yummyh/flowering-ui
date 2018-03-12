@@ -1,2 +1,1 @@
-# flowering-ui
-React 移动端UI组件
+[中文](./README_zh-CN.md)
